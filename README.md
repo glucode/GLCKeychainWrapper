@@ -20,6 +20,20 @@ it, simply add the following line to your Podfile:
 pod "GLCKeychainWrapper"
 ```
 
+## Adding items
+
+### With Touch ID
+
+```Objective-C
+SecAccessControlRef sac = [GLCKeychainWrapper touchIDCurrentSetWhenUnlockedThisDeviceOnlySAC];
+
+[keychain setData:data forKey:@"username" accessControl:sac serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result) {
+    if (result == GLCKeychainWrapperResultSuccess) {
+        NSLog(@"Successfully added item");
+    }
+}];
+```
+
 ## Author
 
 Nico du Plessis, duplessis.nico@gmail.com
