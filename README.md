@@ -1,6 +1,6 @@
 # GLCKeychainWrapper
 
-[![CI Status](http://img.shields.io/travis/Nico du Plessis/GLCKeychainWrapper.svg?style=flat)](https://travis-ci.org/Nico du Plessis/GLCKeychainWrapper)
+[![CI Status](http://img.shields.io/travis/glucode/GLCKeychainWrapper.svg?style=flat)](https://travis-ci.org/glucode/GLCKeychainWrapper)
 [![Version](https://img.shields.io/cocoapods/v/GLCKeychainWrapper.svg?style=flat)](http://cocoapods.org/pods/GLCKeychainWrapper)
 [![License](https://img.shields.io/cocoapods/l/GLCKeychainWrapper.svg?style=flat)](http://cocoapods.org/pods/GLCKeychainWrapper)
 [![Platform](https://img.shields.io/cocoapods/p/GLCKeychainWrapper.svg?style=flat)](http://cocoapods.org/pods/GLCKeychainWrapper)
@@ -18,6 +18,32 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "GLCKeychainWrapper"
+```
+
+## Using GLCKeychainWrapper
+
+### Adding items to Keychain
+
+#### With Touch ID
+
+```Objective-C
+SecAccessControlRef sac = [GLCKeychainWrapper touchIDCurrentSetWhenUnlockedThisDeviceOnlySAC];
+
+[keychain setData:data forKey:@"username" accessControl:sac serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result) {
+    if (result == GLCKeychainWrapperResultSuccess) {
+        NSLog(@"Successfully added item");
+    }
+}];
+```
+### Reading items from Keychain
+
+```Objective-C
+GLCKeychainWrapper *keychain = [GLCKeychainWrapper new];
+[keychain stringForKey:@"username" serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result, NSString * _Nullable value) {
+   
+   NSLog(@"%@", value);
+   
+}];
 ```
 
 ## Author
