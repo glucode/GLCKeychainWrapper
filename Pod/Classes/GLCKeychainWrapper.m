@@ -178,7 +178,7 @@
     // Should be the secret invalidated when passcode is removed? If not then use kSecAttrAccessibleWhenUnlocked
     SecAccessControlRef sacObject = SecAccessControlCreateWithFlags(kCFAllocatorDefault,
                                                                     kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly,
-                                                                    kSecAccessControlTouchIDAny, &error);
+                                                                    kSecAccessControlTouchIDCurrentSet, &error);
 
     return sacObject;
 }
