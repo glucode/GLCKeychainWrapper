@@ -3,17 +3,18 @@
   "version": "0.1.0",
   "summary": "A short description of GLCKeychainWrapper.",
   "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/GLCKeychainWrapper",
+  "homepage": "https://github.com/glucode/GLCKeychainWrapper",
   "license": "MIT",
   "authors": {
     "Nico du Plessis": "duplessis.nico@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/GLCKeychainWrapper.git",
+    "git": "https://github.com/glucode/GLCKeychainWrapper.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/glucode",
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",

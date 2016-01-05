@@ -19,14 +19,14 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/GLCKeychainWrapper"
+  s.homepage         = "https://github.com/glucode/GLCKeychainWrapper"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Nico du Plessis" => "duplessis.nico@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/GLCKeychainWrapper.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/glucode/GLCKeychainWrapper.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/glucode'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'

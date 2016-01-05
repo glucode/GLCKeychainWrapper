@@ -31,7 +31,13 @@
     }
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        OSStatus status =  SecItemAdd((__bridge CFDictionaryRef)attributes, nil);
+        OSStatus status = SecItemAdd((__bridge CFDictionaryRef)attributes, nil);
+        
+        // If a duplicate is found, just delete it and add the item again.
+        if (status == errSecDuplicateItem) {
+            [self syncDeleteDataForKey:key serviceName:serviceName];
+            status = SecItemAdd((__bridge CFDictionaryRef)attributes, nil);
+        }
         
         GLCKeychainWrapperResult result;
         
@@ -70,6 +76,31 @@
 }
 
 #pragma mark - Item deletion
+
+- (GLCKeychainWrapperResult)syncDeleteDataForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName
+{
+    NSMutableDictionary *query = [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                 (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
+                                                                                 (__bridge id)kSecAttrAccount: key,
+                                                                                 (__bridge id)kSecAttrService: serviceName
+                                                                                 }];
+    
+    OSStatus status = SecItemDelete((__bridge CFDictionaryRef)query);
+    
+    GLCKeychainWrapperResult result;
+    switch (status) {
+        case errSecSuccess:
+            result = GLCKeychainWrapperResultSuccess;
+            break;
+        case errSecItemNotFound :
+            result = GLCKeychainWrapperResultFailureItemNotFound;
+            break;
+        default:
+            result = GLCKeychainWrapperResultFailureUnknown;
+            break;
+    }
+    return result;
+}
 
 - (void)deleteDataForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName completion:(void ( ^ _Nullable )(GLCKeychainWrapperResult result))completionBlock;
 {
