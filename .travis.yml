@@ -12,4 +12,4 @@ xcode_sdk: iphonesimulator9.1
 # - pod install --project-directory=Example
 script:
 - set -o pipefail && xcodebuild test -workspace Example/GLCKeychainWrapper.xcworkspace -scheme GLCKeychainWrapper-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+- pod lib lint --allow-warnings
