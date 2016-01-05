@@ -1,6 +1,6 @@
 # GLCKeychainWrapper
 
-[![CI Status](http://img.shields.io/travis/Nico du Plessis/GLCKeychainWrapper.svg?style=flat)](https://travis-ci.org/Nico du Plessis/GLCKeychainWrapper)
+[![CI Status](http://img.shields.io/travis/glucode/GLCKeychainWrapper.svg?style=flat)](https://travis-ci.org/glucode/GLCKeychainWrapper)
 [![Version](https://img.shields.io/cocoapods/v/GLCKeychainWrapper.svg?style=flat)](http://cocoapods.org/pods/GLCKeychainWrapper)
 [![License](https://img.shields.io/cocoapods/l/GLCKeychainWrapper.svg?style=flat)](http://cocoapods.org/pods/GLCKeychainWrapper)
 [![Platform](https://img.shields.io/cocoapods/p/GLCKeychainWrapper.svg?style=flat)](http://cocoapods.org/pods/GLCKeychainWrapper)
