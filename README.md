@@ -20,9 +20,11 @@ it, simply add the following line to your Podfile:
 pod "GLCKeychainWrapper"
 ```
 
-## Adding items
+## Using GLCKeychainWrapper
 
-### With Touch ID
+### Adding items to Keychain
+
+#### With Touch ID
 
 ```Objective-C
 SecAccessControlRef sac = [GLCKeychainWrapper touchIDCurrentSetWhenUnlockedThisDeviceOnlySAC];
