@@ -24,7 +24,16 @@ pod "GLCKeychainWrapper"
 
 ### Adding items to Keychain
 
-#### With Touch ID
+#### Without any access control
+
+```Objective-C
+[keychain setData:data forKey:@"username" accessControl:nil serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result) {
+    if (result == GLCKeychainWrapperResultSuccess) {
+        NSLog(@"Successfully added item");
+    }
+}];
+
+#### With Touch ID access control
 
 ```Objective-C
 SecAccessControlRef sac = [GLCKeychainWrapper touchIDCurrentSetWhenUnlockedThisDeviceOnlySAC];
