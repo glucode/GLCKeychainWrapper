@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
+#   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description      = <<-DESC
                        DESC
 
@@ -23,7 +23,8 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Nico du Plessis" => "duplessis.nico@gmail.com" }
-  s.source           = { :git => "https://github.com/glucode/GLCKeychainWrapper.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/glucode/GLCKeychainWrapper.git", :branch => 'master' }
+#s.source           = { :git => "https://github.com/glucode/GLCKeychainWrapper.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/glucode'
 
   s.platform     = :ios, '8.0'

@@ -245,7 +245,7 @@
 			attributes = {
 				CLASSPREFIX = GLC;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Nico du Plessis";
+				ORGANIZATIONNAME = "Glucode (Pty) Ltd.";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
