@@ -32,6 +32,7 @@ pod "GLCKeychainWrapper"
         NSLog(@"Successfully added item");
     }
 }];
+```
 
 #### With Touch ID access control
 
@@ -44,6 +45,7 @@ SecAccessControlRef sac = [GLCKeychainWrapper touchIDCurrentSetWhenUnlockedThisD
     }
 }];
 ```
+
 ### Reading items from Keychain
 
 ```Objective-C
