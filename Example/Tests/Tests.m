@@ -28,11 +28,5 @@
     [super tearDown];
 }
 
-- (void)testMyTest
-{
-    GLCKeychainWrapper *kc = [GLCKeychainWrapper new];
-    [kc setData:nil forKey:@""];
-}
-
 @end
 
