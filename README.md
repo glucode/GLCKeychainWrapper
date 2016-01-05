@@ -35,6 +35,16 @@ SecAccessControlRef sac = [GLCKeychainWrapper touchIDCurrentSetWhenUnlockedThisD
     }
 }];
 ```
+### Reading items from Keychain
+
+```Objective-C
+GLCKeychainWrapper *keychain = [GLCKeychainWrapper new];
+[keychain stringForKey:@"username" serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result, NSString * _Nullable value) {
+   
+   NSLog(@"%@", value);
+   
+}];
+```
 
 ## Author
 
