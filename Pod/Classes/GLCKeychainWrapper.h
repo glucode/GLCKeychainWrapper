@@ -22,16 +22,19 @@ typedef enum {
  Sets data for key in Keychain.
  @param data The data to store.
  @param key The key for the data.
- @param sac The key for the data.
- @param serviceName The key for the data.
- @param completionBlock The key for the data.
+ @param sac The SecAccessControlRef object specifying the ACL for the data protection. This value can be nil.
+ @param serviceName The service name. This value can be nil.
+ @param completionBlock The completion block that will be called once the operation completes.
  */
 - (void)setData:(nonnull NSData *)data forKey:(nonnull NSString *)key accessControl:(nullable SecAccessControlRef)sac serviceName:(nullable NSString *)serviceName completion:(void (^ _Nullable)(GLCKeychainWrapperResult result))completionBlock;
 
 /**
  Sets a string for key in Keychain.
- @param data The string to store.
+ @param string The string to store.
  @param key The key for the data.
+ @param sac The SecAccessControlRef object specifying the ACL for the data protection. This value can be nil.
+ @param serviceName The service name. This value can be nil.
+ @param completionBlock The completion block that will be called once the operation completes.
  */
 - (void)setString:(nonnull NSString *)string forKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName accessControl:(nullable SecAccessControlRef)sac completion:(void (^ _Nullable)(GLCKeychainWrapperResult result))completionBlock;
 
@@ -40,8 +43,10 @@ typedef enum {
 /**
  Deletes data from Keychain.
  @param key The key for the data.
+ @param serviceName The service name. This value can be nil.
  */
 - (void)deleteDataForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName completion:(void ( ^ _Nullable )(GLCKeychainWrapperResult result))completionBlock;
+
 
 + (nullable SecAccessControlRef)touchIDCurrentSetWhenUnlockedThisDeviceOnlySAC;
 

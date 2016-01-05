@@ -21,7 +21,7 @@
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
                                  (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
                                  (__bridge id)kSecAttrAccount: key,
-                                 (__bridge id)kSecAttrService: serviceName,
+                                 (__bridge id)kSecAttrService: serviceName, 
                                  (__bridge id)kSecValueData: data,
                                  (__bridge id)kSecUseNoAuthenticationUI: @YES,
                                  }];

@@ -7,53 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054A3BCDD25C4923ACC7CB31EC4D1843 /* GLCKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA0D1B5CC59A71D0D073633AE6EFB39 /* GLCKeychainWrapper-dummy.m */; };
 		18517A88BDC04422E24D54C2A04A6978 /* Pods-GLCKeychainWrapper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A1AA001A00982B3247DF3A961DEA62F /* Pods-GLCKeychainWrapper_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52131A74F0391A1EF4917D03236C517B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		19C684C7DD8FEE2169CC47345F25273F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FA6CD62EB7A9C85C7DBBA20924D70A /* Security.framework */; };
+		39A11E94B970F214FAAEAA34B1DB1BF1 /* GLCKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DD0A20C10F6FF49195F853B62502C7D /* GLCKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52131A74F0391A1EF4917D03236C517B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
+		5B44AD3591249FA703D81D5817E696ED /* GLCKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1521E90D52E758E7EB5BB410A2749E41 /* GLCKeychainWrapper.m */; };
 		68F8C6F8532A070328920A6E0DFCA1CA /* Pods-GLCKeychainWrapper_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC6D3C8F5D96C18AADC0ECADAC2AA6F7 /* Pods-GLCKeychainWrapper_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79AF0ECC9D233F197780DA509E5D8A3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		8177CA58C8AEA075636213DB3DBE339D /* GLCKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1521E90D52E758E7EB5BB410A2749E41 /* GLCKeychainWrapper.m */; };
-		89893B973C61F7EE674B716558D360C8 /* GLCKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DD0A20C10F6FF49195F853B62502C7D /* GLCKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93F2B89DA29A74DD2F6B4A54086740B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		6B991C3EA264A8519ED00E803A10FB68 /* GLCKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 685298579B986A7A17D6611B839E8605 /* GLCKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93C805F3D52D654303722164CD7757E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
+		93F2B89DA29A74DD2F6B4A54086740B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
 		9A9CCA6C64B4C4703959A821E9039E33 /* Pods-GLCKeychainWrapper_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7697EDA67412D1E2FF6002CF5C2E41E9 /* Pods-GLCKeychainWrapper_Example-dummy.m */; };
-		9E28F5AE2946BBA953AFE45C8E916CA4 /* GLCKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 685298579B986A7A17D6611B839E8605 /* GLCKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5538EE7A4B08A80298CAF5BAC12D8AC /* GLCKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA0D1B5CC59A71D0D073633AE6EFB39 /* GLCKeychainWrapper-dummy.m */; };
-		E9E49D44BB04DCA5BCFB3B9E846265CE /* GLCKeychainWrapper.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8334046B65A5EEB1FE9032696E1ED758 /* GLCKeychainWrapper.bundle */; };
+		C231D77E0F2E84E811E82F4295AD1B18 /* GLCKeychainWrapper.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8334046B65A5EEB1FE9032696E1ED758 /* GLCKeychainWrapper.bundle */; };
 		F9910757978405A372F0BCEFC8256381 /* Pods-GLCKeychainWrapper_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE03F5FAF05F02C574AAA6E505B9E8 /* Pods-GLCKeychainWrapper_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		49B17D4E1997E59F6F948F42606E7CF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B4DB13AFCB6E73A172108A0A11A3136;
+			remoteInfo = "GLCKeychainWrapper-GLCKeychainWrapper";
+		};
 		9943DC25788D5E6C12B8F66CFFF260DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 775DE3A78DD1ED853B20ECFB6D81F604;
+			remoteGlobalIDString = BC011C4E316CDB91055508696BCD6993;
 			remoteInfo = GLCKeychainWrapper;
 		};
 		B6730530AC464C68753FEADE36723F57 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 775DE3A78DD1ED853B20ECFB6D81F604;
+			remoteGlobalIDString = BC011C4E316CDB91055508696BCD6993;
 			remoteInfo = GLCKeychainWrapper;
-		};
-		EFDFC592BB1D97F118688120469464B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 992E45F09461BAA9E8E3A5D6743A844A;
-			remoteInfo = "GLCKeychainWrapper-GLCKeychainWrapper";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0307982621563C439755B9BC0ED60A1A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		115561C36C5A2620EDF16E95D5FE4626 /* Pods-GLCKeychainWrapper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLCKeychainWrapper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1521E90D52E758E7EB5BB410A2749E41 /* GLCKeychainWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GLCKeychainWrapper.m; sourceTree = "<group>"; };
 		2090495F230C1F6642474D7B4FDA191F /* Pods-GLCKeychainWrapper_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLCKeychainWrapper_Example-resources.sh"; sourceTree = "<group>"; };
 		25B4423CB987ACB596FD84CDD92A1328 /* Pods-GLCKeychainWrapper_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLCKeychainWrapper_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3BBE03F5FAF05F02C574AAA6E505B9E8 /* Pods-GLCKeychainWrapper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GLCKeychainWrapper_Tests-dummy.m"; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		41AC90B70458A3899BAE2A00F4123CB4 /* Pods-GLCKeychainWrapper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GLCKeychainWrapper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		53641CCD2B2A1F76353443053949B39B /* Pods-GLCKeychainWrapper_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLCKeychainWrapper_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		60FA6CD62EB7A9C85C7DBBA20924D70A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		68130D2AFA580D48992565659FC83554 /* Pods-GLCKeychainWrapper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLCKeychainWrapper_Example.release.xcconfig"; sourceTree = "<group>"; };
 		685298579B986A7A17D6611B839E8605 /* GLCKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLCKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
 		7697EDA67412D1E2FF6002CF5C2E41E9 /* Pods-GLCKeychainWrapper_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GLCKeychainWrapper_Example-dummy.m"; sourceTree = "<group>"; };
@@ -83,11 +85,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		173F7F45621B3BE665D1E6CDD8242C95 /* Frameworks */ = {
+		0BFBCC1682118083BF16B0265EA0530F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79AF0ECC9D233F197780DA509E5D8A3C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +100,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		529CEFC707091B7FF52C3E197117CFB0 /* Frameworks */ = {
+		959BD25B4B5C2B53FA6288189CD89CCF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C805F3D52D654303722164CD7757E7 /* Foundation.framework in Frameworks */,
+				19C684C7DD8FEE2169CC47345F25273F /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +164,23 @@
 			path = "Target Support Files/Pods-GLCKeychainWrapper_Example";
 			sourceTree = "<group>";
 		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A86A7991AF0B723B7571D408852AEBF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A86A7991AF0B723B7571D408852AEBF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0307982621563C439755B9BC0ED60A1A /* Foundation.framework */,
+				60FA6CD62EB7A9C85C7DBBA20924D70A /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		5F65488FD89B86C927B8B00BC6F28C33 /* GLCKeychainWrapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +204,7 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				790C4B25FD396033B7EA79232F07C4FA /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				EE609B500CB9A4D6DD7F8733612E3384 /* Products */,
 				81E716F889D14859030EB2F3089B09B4 /* Targets Support Files */,
 			);
@@ -222,22 +242,6 @@
 			path = "Example/Pods/Target Support Files/GLCKeychainWrapper";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		EE609B500CB9A4D6DD7F8733612E3384 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +256,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0808B74EE1AE51A1ADCA7D08FF22086A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B991C3EA264A8519ED00E803A10FB68 /* GLCKeychainWrapper-umbrella.h in Headers */,
+				39A11E94B970F214FAAEAA34B1DB1BF1 /* GLCKeychainWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A7FA442421EE531F790B68A688A0BEE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,44 +281,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67EE4CD35A4C941F75B35C54506EBF62 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9E28F5AE2946BBA953AFE45C8E916CA4 /* GLCKeychainWrapper-umbrella.h in Headers */,
-				89893B973C61F7EE674B716558D360C8 /* GLCKeychainWrapper.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		775DE3A78DD1ED853B20ECFB6D81F604 /* GLCKeychainWrapper */ = {
+		1B4DB13AFCB6E73A172108A0A11A3136 /* GLCKeychainWrapper-GLCKeychainWrapper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 049F5BBF892FCE0E438A2B2D193F56FE /* Build configuration list for PBXNativeTarget "GLCKeychainWrapper" */;
+			buildConfigurationList = 8BFA84392662CFBAACACE2FB3CC41FF7 /* Build configuration list for PBXNativeTarget "GLCKeychainWrapper-GLCKeychainWrapper" */;
 			buildPhases = (
-				0B4A45C2FE891F115267793C273187F9 /* Sources */,
-				173F7F45621B3BE665D1E6CDD8242C95 /* Frameworks */,
-				9D823AF5796FE8DA4A9F757869242E32 /* Resources */,
-				67EE4CD35A4C941F75B35C54506EBF62 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				75C0A9CBB2C13F4F03635E5C136FB0C0 /* PBXTargetDependency */,
-			);
-			name = GLCKeychainWrapper;
-			productName = GLCKeychainWrapper;
-			productReference = E5B2FA683048FF595D9C6190EB76E219 /* GLCKeychainWrapper.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		992E45F09461BAA9E8E3A5D6743A844A /* GLCKeychainWrapper-GLCKeychainWrapper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0474BCB7884F8177D346C999ACD28114 /* Build configuration list for PBXNativeTarget "GLCKeychainWrapper-GLCKeychainWrapper" */;
-			buildPhases = (
-				C76ECE657114D84201CBA647BD63BA9B /* Sources */,
-				529CEFC707091B7FF52C3E197117CFB0 /* Frameworks */,
-				B48328A3C6A673D2529F49D41C4111C3 /* Resources */,
+				C86FEC59E765BC4F62C2521F1517A38A /* Sources */,
+				0BFBCC1682118083BF16B0265EA0530F /* Frameworks */,
+				6681DB91768AA5D24EB7091C4ACD0AC1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -332,6 +317,25 @@
 			name = "Pods-GLCKeychainWrapper_Tests";
 			productName = "Pods-GLCKeychainWrapper_Tests";
 			productReference = C992D69B6B62A2299B332D55CC188634 /* Pods_GLCKeychainWrapper_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BC011C4E316CDB91055508696BCD6993 /* GLCKeychainWrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78636D4B3A34BC4C724F8863E1F03519 /* Build configuration list for PBXNativeTarget "GLCKeychainWrapper" */;
+			buildPhases = (
+				E5D74A4663477FD21535EEA5B746035A /* Sources */,
+				959BD25B4B5C2B53FA6288189CD89CCF /* Frameworks */,
+				480CABE44FA527F5C1E91BD7DD9181FB /* Resources */,
+				0808B74EE1AE51A1ADCA7D08FF22086A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED8B49FA5E197C1946332FA75CE91915 /* PBXTargetDependency */,
+			);
+			name = GLCKeychainWrapper;
+			productName = GLCKeychainWrapper;
+			productReference = E5B2FA683048FF595D9C6190EB76E219 /* GLCKeychainWrapper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F2EAE02D95929166462466AB80352B2F /* Pods-GLCKeychainWrapper_Example */ = {
@@ -373,8 +377,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				775DE3A78DD1ED853B20ECFB6D81F604 /* GLCKeychainWrapper */,
-				992E45F09461BAA9E8E3A5D6743A844A /* GLCKeychainWrapper-GLCKeychainWrapper */,
+				BC011C4E316CDB91055508696BCD6993 /* GLCKeychainWrapper */,
+				1B4DB13AFCB6E73A172108A0A11A3136 /* GLCKeychainWrapper-GLCKeychainWrapper */,
 				F2EAE02D95929166462466AB80352B2F /* Pods-GLCKeychainWrapper_Example */,
 				A0B6714FAB9972DCC236C1CB91BBA790 /* Pods-GLCKeychainWrapper_Tests */,
 			);
@@ -382,15 +386,15 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9D823AF5796FE8DA4A9F757869242E32 /* Resources */ = {
+		480CABE44FA527F5C1E91BD7DD9181FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E49D44BB04DCA5BCFB3B9E846265CE /* GLCKeychainWrapper.bundle in Resources */,
+				C231D77E0F2E84E811E82F4295AD1B18 /* GLCKeychainWrapper.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B48328A3C6A673D2529F49D41C4111C3 /* Resources */ = {
+		6681DB91768AA5D24EB7091C4ACD0AC1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,15 +404,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0B4A45C2FE891F115267793C273187F9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E5538EE7A4B08A80298CAF5BAC12D8AC /* GLCKeychainWrapper-dummy.m in Sources */,
-				8177CA58C8AEA075636213DB3DBE339D /* GLCKeychainWrapper.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		32C9714528C45E8AB747E34A90B6E981 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,7 +412,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C76ECE657114D84201CBA647BD63BA9B /* Sources */ = {
+		C86FEC59E765BC4F62C2521F1517A38A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,26 +427,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5D74A4663477FD21535EEA5B746035A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				054A3BCDD25C4923ACC7CB31EC4D1843 /* GLCKeychainWrapper-dummy.m in Sources */,
+				5B44AD3591249FA703D81D5817E696ED /* GLCKeychainWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		75C0A9CBB2C13F4F03635E5C136FB0C0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "GLCKeychainWrapper-GLCKeychainWrapper";
-			target = 992E45F09461BAA9E8E3A5D6743A844A /* GLCKeychainWrapper-GLCKeychainWrapper */;
-			targetProxy = EFDFC592BB1D97F118688120469464B3 /* PBXContainerItemProxy */;
-		};
 		8534C745F467A95665EFF2074791A9F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GLCKeychainWrapper;
-			target = 775DE3A78DD1ED853B20ECFB6D81F604 /* GLCKeychainWrapper */;
+			target = BC011C4E316CDB91055508696BCD6993 /* GLCKeychainWrapper */;
 			targetProxy = B6730530AC464C68753FEADE36723F57 /* PBXContainerItemProxy */;
 		};
 		9C2FC303166FA64BD3B740AC56667874 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GLCKeychainWrapper;
-			target = 775DE3A78DD1ED853B20ECFB6D81F604 /* GLCKeychainWrapper */;
+			target = BC011C4E316CDB91055508696BCD6993 /* GLCKeychainWrapper */;
 			targetProxy = 9943DC25788D5E6C12B8F66CFFF260DA /* PBXContainerItemProxy */;
+		};
+		ED8B49FA5E197C1946332FA75CE91915 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GLCKeychainWrapper-GLCKeychainWrapper";
+			target = 1B4DB13AFCB6E73A172108A0A11A3136 /* GLCKeychainWrapper-GLCKeychainWrapper */;
+			targetProxy = 49B17D4E1997E59F6F948F42606E7CF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -515,6 +519,72 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		259880F9588496CFCC2BF76DFD3FA418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3E801B08446E235FDE262749E846BC1 /* GLCKeychainWrapper.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GLCKeychainWrapper/GLCKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GLCKeychainWrapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GLCKeychainWrapper/GLCKeychainWrapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GLCKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2E0166E9511FBB0CD3795EEB8BCCC6B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3E801B08446E235FDE262749E846BC1 /* GLCKeychainWrapper.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GLCKeychainWrapper/GLCKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GLCKeychainWrapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GLCKeychainWrapper/GLCKeychainWrapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GLCKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5D609A3B217E0ECA73A6F0957FD92063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3E801B08446E235FDE262749E846BC1 /* GLCKeychainWrapper.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = GLCKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		6AA36200323649C6E6016DF80D02BAE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -585,34 +655,7 @@
 			};
 			name = Debug;
 		};
-		AEFF7A4B265704C1A0967CB4883D21EC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3E801B08446E235FDE262749E846BC1 /* GLCKeychainWrapper.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GLCKeychainWrapper/GLCKeychainWrapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GLCKeychainWrapper/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GLCKeychainWrapper/GLCKeychainWrapper.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = GLCKeychainWrapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C434FD510B6C45D2AEFA371407499F3D /* Debug */ = {
+		B0C105796E91C2A16FE79EEC7563E01D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F3E801B08446E235FDE262749E846BC1 /* GLCKeychainWrapper.xcconfig */;
 			buildSettings = {
@@ -623,45 +666,6 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
-		};
-		C463165EFCCCA307CDA4E44573532547 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3E801B08446E235FDE262749E846BC1 /* GLCKeychainWrapper.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GLCKeychainWrapper/GLCKeychainWrapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GLCKeychainWrapper/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GLCKeychainWrapper/GLCKeychainWrapper.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = GLCKeychainWrapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E8ECD4001637CC5A8BA4817526B39099 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3E801B08446E235FDE262749E846BC1 /* GLCKeychainWrapper.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = GLCKeychainWrapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
 		};
 		F6686A6B66B5634C4F13DB094294D17E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -730,29 +734,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0474BCB7884F8177D346C999ACD28114 /* Build configuration list for PBXNativeTarget "GLCKeychainWrapper-GLCKeychainWrapper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C434FD510B6C45D2AEFA371407499F3D /* Debug */,
-				E8ECD4001637CC5A8BA4817526B39099 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		049F5BBF892FCE0E438A2B2D193F56FE /* Build configuration list for PBXNativeTarget "GLCKeychainWrapper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AEFF7A4B265704C1A0967CB4883D21EC /* Debug */,
-				C463165EFCCCA307CDA4E44573532547 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
 				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78636D4B3A34BC4C724F8863E1F03519 /* Build configuration list for PBXNativeTarget "GLCKeychainWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E0166E9511FBB0CD3795EEB8BCCC6B3 /* Debug */,
+				259880F9588496CFCC2BF76DFD3FA418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BFA84392662CFBAACACE2FB3CC41FF7 /* Build configuration list for PBXNativeTarget "GLCKeychainWrapper-GLCKeychainWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0C105796E91C2A16FE79EEC7563E01D /* Debug */,
+				5D609A3B217E0ECA73A6F0957FD92063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

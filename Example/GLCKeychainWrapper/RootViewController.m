@@ -55,4 +55,14 @@
     }];
 }
 
+- (IBAction)deleteItem:(id)sender
+{
+    GLCKeychainWrapper *keychain = [GLCKeychainWrapper new];
+    [keychain deleteDataForKey:@"username" serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result) {
+        if (result == GLCKeychainWrapperResultSuccess) {
+            NSLog(@"Successfully deleted item");
+        }
+    }];
+}
+
 @end

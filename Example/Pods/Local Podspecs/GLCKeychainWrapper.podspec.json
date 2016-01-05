@@ -1,8 +1,8 @@
 {
   "name": "GLCKeychainWrapper",
   "version": "0.1.0",
-  "summary": "A short description of GLCKeychainWrapper.",
-  "description": "",
+  "summary": "An easy to use wrapper for the iOS Keychain.",
+  "description": "An easy to use wrapper for the iOS Keychain in Objective-C.",
   "homepage": "https://github.com/glucode/GLCKeychainWrapper",
   "license": "MIT",
   "authors": {
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/glucode/GLCKeychainWrapper.git",
-    "tag": "0.1.0"
+    "branch": "master"
   },
   "social_media_url": "https://twitter.com/glucode",
   "platforms": {
@@ -23,5 +23,6 @@
       "Pod/Assets/*.png"
     ]
   },
-  "public_header_files": "Pod/Classes/**/*.h"
+  "public_header_files": "Pod/Classes/**/*.h",
+  "frameworks": "Security"
 }

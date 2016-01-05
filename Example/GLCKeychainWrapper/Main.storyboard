@@ -35,8 +35,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXY-H5-Nt3">
-                                <rect key="frame" x="277" y="185" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="211" y="185" width="179" height="30"/>
+                                <state key="normal" title="Delete item from keychain"/>
+                                <connections>
+                                    <action selector="deleteItem:" destination="whP-gf-Uak" eventType="touchUpInside" id="wSK-bO-OAd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uha-Mb-Mti">
                                 <rect key="frame" x="216" y="223" width="169" height="30"/>

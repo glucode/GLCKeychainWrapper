@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GLCKeychainWrapper: 7852c75b5f9bb369ce79dc813de7e24d4fee21b7
+  GLCKeychainWrapper: 8003187b01b5473a3863ebfee9afc7ddc9a31f5b
 
 COCOAPODS: 0.39.0

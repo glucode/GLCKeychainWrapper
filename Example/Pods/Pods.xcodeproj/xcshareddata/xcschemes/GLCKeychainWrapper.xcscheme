@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CDB93DD382FD510FC3E7366B'
+               BlueprintIdentifier = '17B6AF9D5658AA00192E9E65'
                BlueprintName = 'GLCKeychainWrapper'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'GLCKeychainWrapper.framework'>
