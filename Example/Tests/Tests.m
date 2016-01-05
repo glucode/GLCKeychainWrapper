@@ -8,6 +8,8 @@
 
 @import XCTest;
 
+#import "GLCKeychainWrapper.h"
+
 @interface Tests : XCTestCase
 
 @end
@@ -26,9 +28,10 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testMyTest
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    GLCKeychainWrapper *kc = [GLCKeychainWrapper new];
+    [kc setData:nil forKey:@""];
 }
 
 @end

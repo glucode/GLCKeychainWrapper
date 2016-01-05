@@ -1,0 +1,6 @@
+framework module GLCKeychainWrapper {
+  umbrella header "GLCKeychainWrapper-umbrella.h"
+
+  export *
+  module * { export * }
+}

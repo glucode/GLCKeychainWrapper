@@ -1,0 +1,6 @@
+framework module Pods_GLCKeychainWrapper_Tests {
+  umbrella header "Pods-GLCKeychainWrapper_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

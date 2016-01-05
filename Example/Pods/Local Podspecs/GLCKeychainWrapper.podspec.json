@@ -1,0 +1,26 @@
+{
+  "name": "GLCKeychainWrapper",
+  "version": "0.1.0",
+  "summary": "A short description of GLCKeychainWrapper.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/GLCKeychainWrapper",
+  "license": "MIT",
+  "authors": {
+    "Nico du Plessis": "duplessis.nico@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/GLCKeychainWrapper.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "GLCKeychainWrapper": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "public_header_files": "Pod/Classes/**/*.h"
+}
