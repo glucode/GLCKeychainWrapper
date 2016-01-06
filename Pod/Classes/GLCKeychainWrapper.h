@@ -20,6 +20,8 @@ typedef enum {
 
 #pragma mark - Writing data
 
++ (BOOL)touchIDIsAvailable;
+
 /**
  Sets data for key in Keychain.
  @param data The data to store.

@@ -18,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if ([GLCKeychainWrapper touchIDIsAvailable]) {
+        NSLog(@"Touch ID is available");
+    }
 }
 
 - (void)didReceiveMemoryWarning {

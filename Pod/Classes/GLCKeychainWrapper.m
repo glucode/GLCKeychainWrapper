@@ -8,9 +8,19 @@
 
 #import "GLCKeychainWrapper.h"
 
+@import LocalAuthentication;
+
 @implementation GLCKeychainWrapper
 
 #pragma mark - Item creation
+
++ (BOOL)touchIDIsAvailable
+{
+    LAContext *context = [[LAContext alloc] init];
+    NSError *error;
+    // test if we can evaluate the policy, this test will tell us if Touch ID is available and enrolled
+    return [context canEvaluatePolicy: LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error];
+}
 
 + (void)setData:(nonnull NSData *)data forKey:(nonnull NSString *)key accessControl:(nullable SecAccessControlRef)sac serviceName:(nullable NSString *)serviceName completion:(void (^ _Nullable)(GLCKeychainWrapperResult result))completionBlock
 {
