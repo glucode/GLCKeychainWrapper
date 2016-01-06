@@ -12,7 +12,7 @@
 
 #pragma mark - Item creation
 
-- (void)setData:(nonnull NSData *)data forKey:(nonnull NSString *)key accessControl:(nullable SecAccessControlRef)sac serviceName:(nullable NSString *)serviceName completion:(void (^ _Nullable)(GLCKeychainWrapperResult result))completionBlock
++ (void)setData:(nonnull NSData *)data forKey:(nonnull NSString *)key accessControl:(nullable SecAccessControlRef)sac serviceName:(nullable NSString *)serviceName completion:(void (^ _Nullable)(GLCKeychainWrapperResult result))completionBlock
 {
     // Check for nil params
     
@@ -45,19 +45,15 @@
             case errSecSuccess:
                 result = GLCKeychainWrapperResultSuccess;
                 break;
-                
             case errSecDuplicateItem:
                 result = GLCKeychainWrapperResultFailureDuplicateItem;
                 break;
-                
             case errSecItemNotFound :
                 result = GLCKeychainWrapperResultFailureItemNotFound;
                 break;
-                
             case errSecAuthFailed:
                 result = GLCKeychainWrapperResultFailureAuthFailed;
                 break;
-                
             default:
                 result = GLCKeychainWrapperResultFailureUnknown;
                 break;
@@ -70,14 +66,14 @@
     });
 }
 
-- (void)setString:(nonnull NSString *)string forKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName accessControl:(nullable SecAccessControlRef)sac completion:(void (^ _Nullable)(GLCKeychainWrapperResult result))completionBlock
++ (void)setString:(nonnull NSString *)string forKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName accessControl:(nullable SecAccessControlRef)sac completion:(void (^ _Nullable)(GLCKeychainWrapperResult result))completionBlock
 {
-    [self setData:[string dataUsingEncoding:NSUTF8StringEncoding] forKey:key accessControl:sac serviceName:serviceName completion:completionBlock];
+    [GLCKeychainWrapper setData:[string dataUsingEncoding:NSUTF8StringEncoding] forKey:key accessControl:sac serviceName:serviceName completion:completionBlock];
 }
 
 #pragma mark - Item deletion
 
-- (GLCKeychainWrapperResult)syncDeleteDataForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName
++ (GLCKeychainWrapperResult)syncDeleteDataForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName
 {
     NSMutableDictionary *query = [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                  (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
@@ -102,7 +98,7 @@
     return result;
 }
 
-- (void)deleteDataForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName completion:(void ( ^ _Nullable )(GLCKeychainWrapperResult result))completionBlock;
++ (void)deleteValueForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName completion:(void ( ^ _Nullable )(GLCKeychainWrapperResult result))completionBlock;
 {
     
     NSMutableDictionary *query = [NSMutableDictionary dictionaryWithDictionary:@{
@@ -133,7 +129,7 @@
     });
 }
 
-- (void)stringForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName completion:(void (^ _Nullable)(GLCKeychainWrapperResult result, NSString * _Nullable value))completionBlock
++ (void)stringForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName completion:(void (^ _Nullable)(GLCKeychainWrapperResult result, NSString * _Nullable value))completionBlock
 {
     NSDictionary *query = @{
                             (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,

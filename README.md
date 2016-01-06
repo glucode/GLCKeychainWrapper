@@ -27,8 +27,7 @@ pod "GLCKeychainWrapper"
 #### Without any access control
 
 ```Objective-C
-GLCKeychainWrapper *keychain = [GLCKeychainWrapper new];
-[keychain setData:data forKey:@"username" accessControl:nil serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result) {
+[GLCKeychainWrapper setData:data forKey:@"username" accessControl:nil serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result) {
     if (result == GLCKeychainWrapperResultSuccess) {
         NSLog(@"Successfully added item");
     }
@@ -39,8 +38,7 @@ GLCKeychainWrapper *keychain = [GLCKeychainWrapper new];
 
 ```Objective-C
 SecAccessControlRef sac = [GLCKeychainWrapper touchIDCurrentSetWhenUnlockedThisDeviceOnlySAC];
-GLCKeychainWrapper *keychain = [GLCKeychainWrapper new];
-[keychain setData:data forKey:@"username" accessControl:sac serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result) {
+[GLCKeychainWrapper setData:data forKey:@"username" accessControl:sac serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result) {
     if (result == GLCKeychainWrapperResultSuccess) {
         NSLog(@"Successfully added item");
     }
@@ -50,8 +48,7 @@ GLCKeychainWrapper *keychain = [GLCKeychainWrapper new];
 ### Reading items from Keychain
 
 ```Objective-C
-GLCKeychainWrapper *keychain = [GLCKeychainWrapper new];
-[keychain stringForKey:@"username" serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result, NSString * _Nullable value) {
+[GLCKeychainWrapper stringForKey:@"username" serviceName:@"com.glucode.GLCKeychainWrapper" completion:^(GLCKeychainWrapperResult result, NSString * _Nullable value) {
    
    NSLog(@"%@", value);
    
