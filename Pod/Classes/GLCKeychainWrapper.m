@@ -22,6 +22,31 @@
     return [context canEvaluatePolicy: LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error];
 }
 
++ (GLCKeychainWrapperResult)resultFromStatus:(OSStatus)status
+{
+    GLCKeychainWrapperResult result;
+    
+    switch (status) {
+        case errSecSuccess:
+            result = GLCKeychainWrapperResultSuccess;
+            break;
+        case errSecDuplicateItem:
+            result = GLCKeychainWrapperResultFailureDuplicateItem;
+            break;
+        case errSecItemNotFound :
+            result = GLCKeychainWrapperResultFailureItemNotFound;
+            break;
+        case errSecAuthFailed:
+            result = GLCKeychainWrapperResultFailureAuthFailed;
+            break;
+        default:
+            result = GLCKeychainWrapperResultFailureUnknown;
+            break;
+    }
+    
+    return result;
+}
+
 + (void)setData:(nonnull NSData *)data forKey:(nonnull NSString *)key accessControl:(nullable SecAccessControlRef)sac serviceName:(nullable NSString *)serviceName completion:(void (^ _Nullable)(GLCKeychainWrapperResult result))completionBlock
 {
     // Check for nil params
@@ -49,25 +74,7 @@
             status = SecItemAdd((__bridge CFDictionaryRef)attributes, nil);
         }
         
-        GLCKeychainWrapperResult result;
-        
-        switch (status) {
-            case errSecSuccess:
-                result = GLCKeychainWrapperResultSuccess;
-                break;
-            case errSecDuplicateItem:
-                result = GLCKeychainWrapperResultFailureDuplicateItem;
-                break;
-            case errSecItemNotFound :
-                result = GLCKeychainWrapperResultFailureItemNotFound;
-                break;
-            case errSecAuthFailed:
-                result = GLCKeychainWrapperResultFailureAuthFailed;
-                break;
-            default:
-                result = GLCKeychainWrapperResultFailureUnknown;
-                break;
-        }
+        GLCKeychainWrapperResult result = [GLCKeychainWrapper resultFromStatus:status];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             completionBlock(result);
@@ -92,19 +99,8 @@
                                                                                  }];
     
     OSStatus status = SecItemDelete((__bridge CFDictionaryRef)query);
+    GLCKeychainWrapperResult result = [GLCKeychainWrapper resultFromStatus:status];
     
-    GLCKeychainWrapperResult result;
-    switch (status) {
-        case errSecSuccess:
-            result = GLCKeychainWrapperResultSuccess;
-            break;
-        case errSecItemNotFound :
-            result = GLCKeychainWrapperResultFailureItemNotFound;
-            break;
-        default:
-            result = GLCKeychainWrapperResultFailureUnknown;
-            break;
-    }
     return result;
 }
 
@@ -120,18 +116,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         OSStatus status = SecItemDelete((__bridge CFDictionaryRef)query);
         
-        GLCKeychainWrapperResult result;
-        switch (status) {
-            case errSecSuccess:
-                result = GLCKeychainWrapperResultSuccess;
-                break;
-            case errSecItemNotFound :
-                result = GLCKeychainWrapperResultFailureItemNotFound;
-                break;
-            default:
-                result = GLCKeychainWrapperResultFailureUnknown;
-                break;
-        }
+        GLCKeychainWrapperResult result = [GLCKeychainWrapper resultFromStatus:status];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             completionBlock(result);
@@ -155,18 +140,7 @@
         NSData *resultData = (__bridge_transfer NSData *)dataTypeRef;
         __block NSString *value = [[NSString alloc] initWithData:resultData encoding:NSUTF8StringEncoding];
         
-        GLCKeychainWrapperResult result;
-        switch (status) {
-            case errSecSuccess:
-                result = GLCKeychainWrapperResultSuccess;
-                break;
-            case errSecItemNotFound :
-                result = GLCKeychainWrapperResultFailureItemNotFound;
-                break;
-            default:
-                result = GLCKeychainWrapperResultFailureUnknown;
-                break;
-        }
+        GLCKeychainWrapperResult result = [GLCKeychainWrapper resultFromStatus:status];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             completionBlock(result, value);
