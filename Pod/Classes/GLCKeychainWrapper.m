@@ -49,20 +49,27 @@
 
 + (void)setData:(nonnull NSData *)data forKey:(nonnull NSString *)key accessControl:(nullable SecAccessControlRef)sac serviceName:(nullable NSString *)serviceName completion:(void (^ _Nullable)(GLCKeychainWrapperResult result))completionBlock
 {
-    // Check for nil params
-    
     // we want the operation to fail if there is an item which needs authentication so we will use
     // kSecUseNoAuthenticationUI
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
                                  (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
-                                 (__bridge id)kSecAttrAccount: key,
-                                 (__bridge id)kSecAttrService: serviceName, 
-                                 (__bridge id)kSecValueData: data,
                                  (__bridge id)kSecUseNoAuthenticationUI: @YES,
                                  }];
     
     if (sac != NULL) {
         [attributes setObject:(__bridge id)sac forKey:(__bridge id)kSecAttrAccessControl];
+    }
+    
+    if (key != nil) {
+        [attributes setObject:(id)key forKey:(__bridge id)kSecAttrAccount];
+    }
+    
+    if (serviceName != nil) {
+        [attributes setObject:(id)serviceName forKey:(__bridge id)kSecAttrService];
+    }
+    
+    if (data != nil) {
+        [attributes setObject:(id)data forKey:(__bridge id)kSecValueData];
     }
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -92,13 +99,17 @@
 
 + (GLCKeychainWrapperResult)syncDeleteDataForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName
 {
-    NSMutableDictionary *query = [NSMutableDictionary dictionaryWithDictionary:@{
-                                                                                 (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
-                                                                                 (__bridge id)kSecAttrAccount: key,
-                                                                                 (__bridge id)kSecAttrService: serviceName
-                                                                                 }];
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{(__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword}];
     
-    OSStatus status = SecItemDelete((__bridge CFDictionaryRef)query);
+    if (key != nil) {
+        [attributes setObject:(id)key forKey:(__bridge id)kSecAttrAccount];
+    }
+    
+    if (serviceName != nil) {
+        [attributes setObject:(id)serviceName forKey:(__bridge id)kSecAttrService];
+    }
+    
+    OSStatus status = SecItemDelete((__bridge CFDictionaryRef)attributes);
     GLCKeychainWrapperResult result = [GLCKeychainWrapper resultFromStatus:status];
     
     return result;
@@ -106,15 +117,20 @@
 
 + (void)deleteValueForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName completion:(void ( ^ _Nullable )(GLCKeychainWrapperResult result))completionBlock;
 {
-    
-    NSMutableDictionary *query = [NSMutableDictionary dictionaryWithDictionary:@{
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
                             (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
-                            (__bridge id)kSecAttrAccount: key,
-                            (__bridge id)kSecAttrService: serviceName
                             }];
     
+    if (key != nil) {
+        [attributes setObject:(id)key forKey:(__bridge id)kSecAttrAccount];
+    }
+    
+    if (serviceName != nil) {
+        [attributes setObject:(id)serviceName forKey:(__bridge id)kSecAttrService];
+    }
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        OSStatus status = SecItemDelete((__bridge CFDictionaryRef)query);
+        OSStatus status = SecItemDelete((__bridge CFDictionaryRef)attributes);
         
         GLCKeychainWrapperResult result = [GLCKeychainWrapper resultFromStatus:status];
         
@@ -126,16 +142,23 @@
 
 + (void)stringForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName completion:(void (^ _Nullable)(GLCKeychainWrapperResult result, NSString * _Nullable value))completionBlock
 {
-    NSDictionary *query = @{
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
                             (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
-                            (__bridge id)kSecAttrService: serviceName,
                             (__bridge id)kSecReturnData: @YES,
                             (__bridge id)kSecUseOperationPrompt: @"Authenticate to access service password",
-                            };
+                            }];
+    
+    if (key != nil) {
+        [attributes setObject:(id)key forKey:(__bridge id)kSecAttrAccount];
+    }
+    
+    if (serviceName != nil) {
+        [attributes setObject:(id)serviceName forKey:(__bridge id)kSecAttrService];
+    }
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         CFTypeRef dataTypeRef = NULL;
-        OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)(query), &dataTypeRef);
+        OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)(attributes), &dataTypeRef);
 
         NSData *resultData = (__bridge_transfer NSData *)dataTypeRef;
         __block NSString *value = [[NSString alloc] initWithData:resultData encoding:NSUTF8StringEncoding];
