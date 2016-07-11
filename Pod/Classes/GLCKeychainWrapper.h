@@ -46,6 +46,8 @@ typedef enum {
 
 + (void)stringForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName completion:(void (^ _Nullable)(GLCKeychainWrapperResult result, NSString * _Nullable value))completionBlock;
 
++ (void)stringForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName operationPromptMessage:(nonnull NSString *)operationPromptMessage completion:(void (^ _Nullable)(GLCKeychainWrapperResult result, NSString * _Nullable value))completionBlock;
+
 #pragma mark - Deleting data
 
 /**
