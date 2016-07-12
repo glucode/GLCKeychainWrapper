@@ -142,10 +142,15 @@
 
 + (void)stringForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName completion:(void (^ _Nullable)(GLCKeychainWrapperResult result, NSString * _Nullable value))completionBlock
 {
+    [GLCKeychainWrapper stringForKey:key serviceName:serviceName operationPromptMessage:@"Authenticate to access service password" completion:completionBlock];
+}
+
++ (void)stringForKey:(nonnull NSString *)key serviceName:(nullable NSString *)serviceName operationPromptMessage:(nonnull NSString *)operationPromptMessage completion:(void (^ _Nullable)(GLCKeychainWrapperResult result, NSString * _Nullable value))completionBlock
+{
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
                             (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
                             (__bridge id)kSecReturnData: @YES,
-                            (__bridge id)kSecUseOperationPrompt: @"Authenticate to access service password",
+                            (__bridge id)kSecUseOperationPrompt: operationPromptMessage,
                             }];
     
     if (key != nil) {
